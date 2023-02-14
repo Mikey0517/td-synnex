@@ -1,0 +1,55 @@
+@import '@/assets/variable.less';
+
+.default-layout {
+  height: 100vh;
+  
+  .default-layout-menu {
+    &:where(.css-dev-only-do-not-override-diro6f).ant-menu-light {
+      .ant-menu-item {
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        padding-left: 15px !important;
+        font-weight: bold;
+        border-bottom: 1px solid #e1e2e2;
+
+        .svg {
+          margin-right: 7px;
+        }
+
+        &.ant-menu-item-selected,
+        &.ant-menu-item-active {
+          color: @default-layout-menu-active-color;
+          background-color: @default-layout-menu-background-color;
+
+          .svg {
+            svg {
+              fill: @default-layout-menu-active-color;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: @default-layout-menu-active-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+:where(.css-dev-only-do-not-override-diro6f).ant-layout {
+  background: #ffffff;
+
+  .ant-layout-sider {
+    background: #ffffff;
+  }
+}
+
+:where(.css-dev-only-do-not-override-diro6f).ant-layout .ant-layout-sider {
+  border-right: 1px solid #e1e2e2;
+}
